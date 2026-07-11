@@ -1,0 +1,239 @@
+/* General style */
+section {
+  padding-block: 50px;
+  margin-top: 50px;
+}
+
+.container {
+  width: 75%;
+}
+
+:root {
+  --main-color: #ff5b00;
+  --bg-linear: linear-gradient(to right, #ff5b00, #fd3d2d);
+}
+
+/*********** navbar */
+.logo-cultry {
+  background-image: var(--bg-linear);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-img {
+  width: 50px;
+  height: 50px;
+}
+
+.nav-item i:hover{
+color: var(--main-color);
+}
+
+@media (max-width: 982px) {
+  .navbar-nav {
+    align-items: flex-start; /* align items to the left */
+    justify-content: flex-start;
+    padding-left: 1rem; /* optional: add left spacing */
+  }
+
+  .navbar-nav .nav-link {
+    display: block;
+    text-align: left; /* text aligned left */
+    width: 100%; /* full width for clean stacking */
+  }
+}
+
+@media (min-width: 982px) {
+  .navbar-nav {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* main section */
+
+/* Main layout */
+.recipe-main {
+  background-color: #fff8ec;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Left side image container */
+.col-lg-5 {
+  overflow: hidden; /* prevents image overflow */
+  border-top-left-radius: 10px; /* optional rounded corners */
+  border-bottom-left-radius: 10px; /* optional rounded corners */
+}
+
+.fixed-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* keeps aspect ratio, fills box */
+  display: block;
+}
+
+/* Rating box */
+.rating-box {
+  font-size: 0.9rem;
+}
+
+/* Prep info box */
+.prep-info {
+  position: absolute;
+  bottom: 20px;
+  left: 10%;
+  right: 10%;
+}
+
+
+
+.prep-info > div {
+  display: flex;
+  flex-direction: column;   /* stack icon + spans vertically */
+  align-items: center;      /* center horizontally */
+  text-align: center;       /* center text under icon */
+}
+
+.prep-info i {
+  font-size: 1.5rem;
+
+}
+
+
+
+/* Right content area */
+.content-area {
+  background-color: #fff;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  height: 100vh;
+}
+
+
+.badge1 {
+  background-color: #dbfce7;
+  color: rgb(0, 130, 53);
+}
+.badge2 {
+  background-color: #dbeafe;
+  color: rgb(20, 71, 230);
+}
+
+
+.button-tag button {
+    background-color: #FFEDD4;
+    color: var(--main-color);
+
+}
+.button-tag button:hover {
+    background-color: #FFD6A7;
+    color: var(--main-color);
+}
+/* Tab content grows */
+.tab-content {
+  flex: 1;            /* take available space */
+  overflow-y: auto;   /* scroll if too long */
+}
+
+/* Tabs */
+.nav-tabs .nav-link {
+  color: #555;
+  font-weight: 500;
+  border: none;
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+}
+
+.nav-tabs .nav-link:hover {
+  color: var(--main-color);
+}
+
+
+/* Tab content */
+.tab-content {
+  background-color: #fff8ec;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+/* Button stays at bottom */
+
+/* Gradient button */
+.btn-gradient {
+  background: var(--bg-linear);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+.btn-gradient:hover {
+  transform: scale(1.05);
+  background: var(--main-color);
+  color: white;
+}
+
+.content-area .btn-gradient {
+  align-self: center; /* center horizontally */
+  margin-top: auto;   /* push to bottom */
+}
+
+/* Responsive tweaks */
+@media (max-width: 992px) {
+  /* Stack columns */
+  .recipe-box .row {
+    flex-direction: column;
+  }
+
+  /* Left image becomes full width */
+  .col-lg-5 {
+    border-radius: 10px 10px 0 0;   /* rounded top only */
+    height: auto;
+  }
+
+  .fixed-img {
+    position: relative;  /* no sticky on mobile */
+    height: auto;
+    max-height: 250px;   /* optional: limit height */
+    object-fit: cover;
+  }
+
+  /* Right content full width */
+  .content-area {
+    border-radius: 0 0 10px 10px;   /* rounded bottom only */
+    height: auto;
+    box-shadow: none;               /* optional: simplify mobile look */
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Prep info spacing tighter */
+  .prep-info {
+    position: static;   /* no absolute positioning */
+    margin: 10px 0;
+    padding: 0.5rem;
+  }
+
+  .prep-info > div {
+    flex: 1;
+    margin: 5px;
+  }
+
+  /* Button pinned at bottom */
+  .content-area .btn-gradient {
+    margin-top: auto;
+    width: 100%;        /* full width button on mobile */
+  }
+}
+

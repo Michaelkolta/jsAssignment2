@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What's For Dinner</title>
+
+  <!-- icon site of the title -->
+  <link rel="icon" href="./images/logo-2.jpg" />
+  <!-- google font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Days+One&display=swap"
+    rel="stylesheet" />
+
+  <!-- boot strap  -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- link fontawsome (icons) -->
+  <link rel="stylesheet" href="css/all.min.css" />
+  <!-- link index css Main -->
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <div class="container">
+      <!-- Left logo -->
+      <div class="left-logo d-flex align-items-center">
+        <div>
+          <span class="logo-cultry"><i class="fa-solid fa-utensils fa-lg text-white"></i></span>
+        </div>
+        <div class="ms-2">
+          <h3><a class="navbar-brand mb-0" href="#">What's For Dinner</a></h3>
+          <p class="mb-0 small text-muted">Your daily meal inspiration</p>
+        </div>
+      </div>
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Right nav-items -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fa-solid fa-bookmark fa-lg"></i>
+                <span class="d-inline d-lg-none"> Saved Recipes</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fa-solid fa-clock-rotate-left fa-lg"></i>
+                <span class="d-inline d-lg-none"> Recent</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fa-solid fa-gear fa-lg"></i>
+                <span class="d-inline d-lg-none"> Settings</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center" href="#">
+                <img src="images/avatar-2.jpg" alt="Profile" class="profile-img rounded-circle me-2 img-thumbnail">
+                <span class="d-inline d-lg-none"> Profile</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- main -section -->
+  <main class="recipe-main">
+    <section class="recipe-box container ">
+      <div class="row">
+        <!-- Left side (image + rating + prep info) -->
+        <div class="col-lg-5 p-0 position-relative ">
+          <img src="images/Images-Products/1.jpg" class="img-fluid fixed-img" alt="Chicken Tikka Masala">
+          <div
+            class="rating-box position-absolute top-0 start-0 m-3 bg-white rounded-pill px-3 py-1 d-flex align-items-center shadow-sm">
+            <i class="fa-solid fa-star text-warning me-2"></i>
+            <span class="fw-bold">4.7</span>
+            <span class="text-muted ms-1">(389 reviews)</span>
+          </div>
+          <div class=" prep-info d-flex justify-content-around bg-white rounded-3 shadow-sm p-3 mt-3 ">
+            <div><i class="fa-solid fa-clock text-warning "></i> <span>Prep Time</span><br><span class="fw-bold ">20
+                min</span></div>
+            <div><i class="fa-solid fa-fire text-danger"></i> <span>Cook Time</span><br><span class="fw-bold">30
+                min</span></div>
+            <div><i class="fa-solid fa-users text-primary"></i> <span>Servings</span><br><span class="fw-bold">4
+                people</span></div>
+          </div>
+        </div>
+
+        <!-- Right side (content) -->
+        <div class="col-lg-7 p-4 content-area">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <span class="badge1 rounded-pill px-2 py-1">Intermediate</span>
+              <span class="badge2 rounded-pill px-2 py-1">Asian</span>
+              <h1 class="fw-bold mt-2">Chicken Tikka Masala</h1>
+              <p class="text-muted">Rich and creamy Indian curry with tender chicken pieces</p>
+            </div>
+            <div class="button-tag d-flex gap-2">
+              <button class="btn btn-light border"><i class="fa-solid fa-bookmark"></i></button>
+              <button class="btn btn-light border"><i class="fa-solid fa-share-nodes"></i></button>
+            </div>
+          </div>
+
+          <!-- Extended Preparation -->
+          <div class="alert alert-danger mt-3" role="alert">
+            <i class="fa-solid fa-triangle-exclamation me-2"></i>
+            Extended Preparation Time — This recipe requires more than 45 minutes to prepare. Plan accordingly!
+          </div>
+
+          <!-- Tabs -->
+          <ul class="nav nav-tabs mt-4" id="recipeTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="ingredients-tab" data-bs-toggle="tab" data-bs-target="#ingredients"
+                type="button" role="tab">
+                <span><i class="fa-solid fa-list-check me-1"></i> Ingredients</span>
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="instructions-tab" data-bs-toggle="tab" data-bs-target="#instructions"
+                type="button" role="tab">
+                <span><i class="fa-solid fa-book-open me-1"></i> Instructions</span>
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="nutrition-tab" data-bs-toggle="tab" data-bs-target="#nutrition" type="button"
+                role="tab">
+                <span><i class="fa-solid fa-chart-pie me-1"></i> Nutrition</span>
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tips-tab" data-bs-toggle="tab" data-bs-target="#tips" type="button"
+                role="tab">
+                <span><i class="fa-solid fa-lightbulb me-1"></i> Chef's Tips</span>
+              </button>
+            </li>
+          </ul>
+
+          <!-- Tab Content -->
+          <div class="tab-content mt-3">
+            <div class="tab-pane fade show active" id="ingredients" role="tabpanel">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">600g chicken breast, cubed</li>
+                <li class="list-group-item">1 cup plain yogurt</li>
+                <li class="list-group-item">2 tablespoons tikka masala paste</li>
+                <li class="list-group-item">400ml coconut cream</li>
+                <li class="list-group-item">1 onion, diced</li>
+                <li class="list-group-item">4 cloves garlic, minced</li>
+                <li class="list-group-item">2 tablespoons ginger, grated</li>
+                <li class="list-group-item">400g canned tomatoes</li>
+                <li class="list-group-item">Fresh cilantro for garnish</li>
+              </ul>
+            </div>
+
+            <div class="tab-pane fade" id="instructions" role="tabpanel">
+              <ol class="list-group list-group-numbered">
+                <li class="list-group-item">Marinate chicken in half the yogurt and 1 tablespoon tikka paste for at
+                  least 30 minutes.</li>
+                <li class="list-group-item">Heat oil in a large pan, cook marinated chicken until browned. Remove and
+                  set aside.</li>
+                <li class="list-group-item">Sauté onion until soft. Add garlic and ginger, cook for 1 minute.</li>
+                <li class="list-group-item">Add remaining tikka paste and canned tomatoes. Simmer for 10 minutes.</li>
+                <li class="list-group-item">Stir in coconut cream and remaining yogurt. Add chicken back to the pan.
+                </li>
+              </ol>
+            </div>
+
+            <div class="tab-pane fade" id="nutrition" role="tabpanel">
+              <div class="row text-center">
+                <div class="col-6 col-md-4 p-2"><i class="fa-solid fa-fire text-warning"></i><br><strong>450
+                    kcal</strong><br>Calories</div>
+                <div class="col-6 col-md-4 p-2"><i
+                    class="fa-solid fa-dumbbell text-primary"></i><br><strong>38g</strong><br>Protein</div>
+                <div class="col-6 col-md-4 p-2"><i
+                    class="fa-solid fa-wheat-awn text-warning"></i><br><strong>24g</strong><br>Carbs</div>
+                <div class="col-6 col-md-4 p-2"><i
+                    class="fa-solid fa-droplet text-danger"></i><br><strong>22g</strong><br>Fat</div>
+                <div class="col-6 col-md-4 p-2"><i
+                    class="fa-solid fa-leaf text-success"></i><br><strong>4g</strong><br>Fiber</div>
+                <div class="col-6 col-md-4 p-2"><i
+                    class="fa-solid fa-cube text-pink"></i><br><strong>760mg</strong><br>Sodium</div>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="tips" role="tabpanel">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><i class="fa-solid fa-check text-warning me-2"></i>Marinate chicken
+                  overnight for deeper flavor</li>
+                <li class="list-group-item"><i class="fa-solid fa-check text-warning me-2"></i>Use full-fat coconut
+                  cream for richest sauce</li>
+                <li class="list-group-item"><i class="fa-solid fa-check text-warning me-2"></i>Adjust spice level by
+                  varying tikka paste amount</li>
+                <li class="list-group-item"><i class="fa-solid fa-check text-warning me-2"></i>Serve with naan bread and
+                  basmati rice</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Button -->
+          <div class=" mt-4">
+            <button class="btn btn-gradient px-4 py-2">
+              <i class="fa-solid fa-arrows-rotate me-2"></i> Try Another Recipe
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+
+  <script src="js/index.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
