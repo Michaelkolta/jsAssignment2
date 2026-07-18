@@ -1,6 +1,6 @@
-const recipes = [
+var recipesList = [
   {
-    image: "images/Images-Products/1.jpg",
+    image: "./images/Images-Products/1.jpg",
     rating: "4.7",
     reviews: "(389 reviews)",
     prepTime: "25 min",
@@ -8,7 +8,8 @@ const recipes = [
     servings: "4 people",
     tags: ["Intermediate", "Asian"],
     title: "Chicken Tikka Masala",
-    alert: "Extended Preparation Time — Requires marination and slow cooking.",
+    tileInfo: "Rich and creamy Indian curry with tender chicken pieces",
+    alert: true,
     ingredients: [
       "600g chicken breast, cubed",
       "1 cup plain yogurt",
@@ -27,14 +28,16 @@ const recipes = [
       "Add paste and tomatoes, simmer 10 minutes.",
       "Stir in coconut cream, return chicken."
     ],
-    nutrition: [
-      { icon: "fa-fire text-warning", value: "450 kcal", label: "Calories" },
-      { icon: "fa-dumbbell text-primary", value: "38g", label: "Protein" },
-      { icon: "fa-wheat-awn text-warning", value: "24g", label: "Carbs" },
-      { icon: "fa-droplet text-danger", value: "22g", label: "Fat" },
-      { icon: "fa-leaf text-success", value: "4g", label: "Fiber" },
-      { icon: "fa-cube text-pink", value: "760mg", label: "Sodium" }
-    ],
+    nutrition:
+
+      [
+        { icon: "fa-solid fa-fire text-warning", value: "450 kcal", label: "Calories" },
+        { icon: "fa-solid fa-dumbbell text-primary", value: "38g", label: "Protein" },
+        { icon: "fa-solid fa-wheat-awn text-warning", value: "24g", label: "Carbs" },
+        { icon: "fa-solid fa-droplet text-danger", value: "22g", label: "Fat" },
+        { icon: "fa-solid fa-leaf text-success", value: "4g", label: "Fiber" },
+        { icon: "fa-solid fa-cube text-pink", value: "760mg", label: "Sodium" }
+      ],
     tips: [
       "Marinate overnight for deeper flavor",
       "Use full-fat coconut cream",
@@ -43,15 +46,16 @@ const recipes = [
     ]
   },
   {
-    image: "images/Images-Products/2.jpg",
+    image: "./images/Images-Products/2.jpg",
     rating: "4.8",
     reviews: "(210 reviews)",
     prepTime: "15 min",
-    cookTime: "40 min",
+    cookTime: "45 min",
     servings: "3 people",
     tags: ["Advanced", "American"],
     title: "Roast Beef",
-    alert: "Allow resting before slicing for tenderness.",
+    tileInfo: "Tender beef roasted to perfection with rich flavor",
+    alert: true,
     ingredients: ["1kg beef roast", "2 tbsp olive oil", "Salt & pepper", "Garlic cloves", "Rosemary sprigs"],
     instructions: ["Season beef generously.", "Sear in hot pan.", "Roast at 180°C for 40 minutes.", "Rest before slicing."],
     nutrition: [
@@ -62,7 +66,7 @@ const recipes = [
     tips: ["Use meat thermometer", "Slice against the grain"]
   },
   {
-    image: "images/Images-Products/3.jpg",
+    image: "./images/Images-Products/3.jpg",
     rating: "4.6",
     reviews: "(178 reviews)",
     prepTime: "10 min",
@@ -70,7 +74,8 @@ const recipes = [
     servings: "2 people",
     tags: ["Easy", "Thai"],
     title: "Spicy Thai Curry",
-    alert: "Adjust chili level to taste.",
+    tileInfo: "Aromatic coconut curry with chili heat",
+    alert: false,
     ingredients: ["400ml coconut milk", "2 tbsp red curry paste", "Vegetables", "Chicken or tofu"],
     instructions: ["Sauté paste in oil.", "Add coconut milk.", "Add protein and vegetables.", "Simmer until cooked."],
     nutrition: [
@@ -80,15 +85,16 @@ const recipes = [
     tips: ["Serve with jasmine rice", "Add fish sauce for depth"]
   },
   {
-    image: "images/Images-Products/4.jpg",
+    image: "./images/Images-Products/4.jpg",
     rating: "4.9",
     reviews: "(320 reviews)",
     prepTime: "15 min",
-    cookTime: "10 min",
+    cookTime: "45 min",
     servings: "2 people",
     tags: ["Healthy", "Vegetarian"],
     title: "Rainbow Veggie Bowl",
-    alert: "Packed with fresh vegetables.",
+    tileInfo: "Colorful medley of fresh seasonal vegetables",
+    alert: false,
     ingredients: ["Quinoa", "Bell peppers", "Carrots", "Broccoli", "Avocado"],
     instructions: ["Cook quinoa.", "Steam vegetables.", "Arrange in bowl.", "Top with avocado."],
     nutrition: [
@@ -98,7 +104,7 @@ const recipes = [
     tips: ["Use seasonal vegetables", "Add tahini dressing"]
   },
   {
-    image: "images/Images-Products/5.jpg",
+    image: "./images/Images-Products/5.jpg",
     rating: "4.8",
     reviews: "(265 reviews)",
     prepTime: "20 min",
@@ -106,7 +112,8 @@ const recipes = [
     servings: "3 people",
     tags: ["Easy", "Mexican"],
     title: "Chickpea Tacos",
-    alert: "Squeeze lime before serving.",
+    tileInfo: "Crispy tortillas filled with spiced chickpeas",
+    alert: true,
     ingredients: ["Taco shells", "Chickpeas", "Spices", "Lettuce", "Tomatoes"],
     instructions: ["Season chickpeas.", "Cook until crispy.", "Fill tacos with toppings."],
     nutrition: [
@@ -115,7 +122,7 @@ const recipes = [
     tips: ["Add guacamole", "Use smoked paprika"]
   },
   {
-    image: "images/Images-Products/6.jpg",
+    image: "./images/Images-Products/6.jpg",
     rating: "4.7",
     reviews: "(198 reviews)",
     prepTime: "10 min",
@@ -123,7 +130,8 @@ const recipes = [
     servings: "2 people",
     tags: ["Intermediate", "Asian"],
     title: "Vegetable Fried Rice",
-    alert: "Use leftover rice for best texture.",
+    tileInfo: "Savory stir-fry with fresh garden vegetables",
+    alert: false,
     ingredients: ["2 cups rice", "Mixed vegetables", "Soy sauce", "Eggs"],
     instructions: ["Scramble eggs.", "Add vegetables.", "Add rice and soy sauce."],
     nutrition: [
@@ -132,7 +140,7 @@ const recipes = [
     tips: ["Cook rice a day ahead", "Use sesame oil"]
   },
   {
-    image: "images/Images-Products/7.jpg",
+    image: "./images/Images-Products/7.jpg",
     rating: "4.9",
     reviews: "(400 reviews)",
     prepTime: "25 min",
@@ -140,7 +148,8 @@ const recipes = [
     servings: "2 people",
     tags: ["Intermediate", "Italian"],
     title: "Margherita Pizza",
-    alert: "Bake until crust is golden.",
+    tileInfo: "Classic Italian pizza with fresh basil and mozzarella",
+    alert: true,
     ingredients: ["Pizza dough", "Tomato sauce", "Mozzarella", "Basil"],
     instructions: ["Roll dough.", "Spread sauce.", "Add cheese and basil.", "Bake at 220°C."],
     nutrition: [
@@ -149,7 +158,7 @@ const recipes = [
     tips: ["Use fresh mozzarella", "Preheat oven well"]
   },
   {
-    image: "images/Images-Products/8.jpg",
+    image: "./images/Images-Products/8.jpg",
     rating: "4.6",
     reviews: "(178 reviews)",
     prepTime: "10 min",
@@ -157,7 +166,8 @@ const recipes = [
     servings: "3 people",
     tags: ["Easy", "Seafood"],
     title: "Garlic Butter Shrimp",
-    alert: "Cook immediately after marinating.",
+    tileInfo: "Succulent shrimp sautéed in rich garlic butter",
+    alert: false,
     ingredients: ["Shrimp", "Butter", "Garlic", "Parsley"],
     instructions: ["Melt butter.", "Add garlic.", "Cook shrimp until pink."],
     nutrition: [
@@ -166,7 +176,7 @@ const recipes = [
     tips: ["Serve with pasta", "Add lemon juice"]
   },
   {
-    image: "images/Images-Products/9.jpg",
+    image: "./images/Images-Products/9.jpg",
     rating: "4.9",
     reviews: "(320 reviews)",
     prepTime: "20 min",
@@ -174,7 +184,8 @@ const recipes = [
     servings: "2 people",
     tags: ["Intermediate", "Asian"],
     title: "Vegetable Chow Mein",
-    alert: "Ready in under 40 minutes.",
+    tileInfo: "Stir-fried noodles with crisp garden vegetables",
+    alert: true,
     ingredients: ["Noodles", "Vegetables", "Soy sauce", "Sesame oil"],
     instructions: ["Boil noodles.", "Stir-fry vegetables.", "Add noodles and sauce."],
     nutrition: [
@@ -184,7 +195,7 @@ const recipes = [
   },
 
   {
-    image: "images/Images-Products/10.jpg",
+    image: "./images/Images-Products/10.jpg",
     rating: "4.8",
     reviews: "(250 reviews)",
     prepTime: "10 min",
@@ -192,7 +203,8 @@ const recipes = [
     servings: "1 person",
     tags: ["Easy", "American"],
     title: "Cheese Sandwich",
-    alert: "Serve warm for best taste.",
+    tileInfo: "Golden toasted bread with melted cheese",
+    alert: true,
     ingredients: ["2 slices bread", "2 slices cheddar cheese", "Butter for spreading"],
     instructions: [
       "Butter bread slices.",
@@ -207,7 +219,7 @@ const recipes = [
     tips: ["Use sourdough bread", "Add tomato slices for freshness"]
   },
   {
-    image: "images/Images-Products/11.jpg",
+    image: "./images/Images-Products/11.jpg",
     rating: "4.9",
     reviews: "(400 reviews)",
     prepTime: "25 min",
@@ -215,7 +227,8 @@ const recipes = [
     servings: "4 people",
     tags: ["Advanced", "Italian"],
     title: "Classic Lasagna",
-    alert: "Extended Preparation Time — Allow resting before serving.",
+    tileInfo: "Layers of pasta, rich meat sauce, and creamy cheese",
+    alert: true,
     ingredients: [
       "Lasagna sheets",
       "500g minced beef",
@@ -237,7 +250,7 @@ const recipes = [
     tips: ["Let lasagna rest 15 minutes", "Use fresh pasta sheets"]
   },
   {
-    image: "images/Images-Products/12.jpg",
+    image: "./images/Images-Products/12.jpg",
     rating: "4.7",
     reviews: "(250 reviews)",
     prepTime: "10 min",
@@ -245,7 +258,8 @@ const recipes = [
     servings: "1 person",
     tags: ["Easy", "Indian"],
     title: "Crispy Samosas",
-    alert: "Serve hot with chutney.",
+    tileInfo: "Golden pastry pockets filled with spiced vegetables",
+    alert: true,
     ingredients: [
       "Samosa wrappers",
       "Potato filling",
@@ -267,96 +281,93 @@ const recipes = [
   }
 ];
 
-document.querySelector(".btn-gradient").addEventListener("click", () => {
-  const productImage = document.getElementById("productImage");
+// math.random  ==> 0 -1  but 1 not include 0 - 0.99
+// math.random * recipesList.length ==> 0 - 11.99 (because 12 )
+// math.floor =>  0 - 11 (without any decimal)
 
-  let imagePath;
-  let randomRecipe = recipes[Math.floor(Math.random() * recipes.length)];
+var lastIndex = 0 ;
 
-  // If user uploaded files, pick one randomly
-  if (productImage && productImage.files.length > 0) {
-    const randomFile = productImage.files[Math.floor(Math.random() * productImage.files.length)];
-    imagePath = URL.createObjectURL(randomFile); // temporary URL
-  } else {
-    // fallback to default images
-    const fallbackImages = [
-      "images/Images-Products/1.jpg",
-      "images/Images-Products/2.jpg",
-      "images/Images-Products/3.jpg",
-      "images/Images-Products/4.jpg",
-      "images/Images-Products/5.jpg",
-      "images/Images-Products/6.jpg",
-      "images/Images-Products/7.jpg",
-      "images/Images-Products/8.jpg",
-      "images/Images-Products/9.jpg",
-      "images/Images-Products/10.jpg",
-      "images/Images-Products/11.jpg",
-      "images/Images-Products/12.jpg"
-    ];
-    imagePath = fallbackImages[Math.floor(Math.random() * fallbackImages.length)];
+document.getElementById("randombtn").onclick = function () {
+
+  var randomIndex;
+  do {
+    randomIndex = Math.floor(Math.random() * recipesList.length);
+    
+  } while (randomIndex == lastIndex)
+  lastIndex = randomIndex;
+  console.log(lastIndex);
+  var randomrecipes = recipesList[randomIndex];
+
+
+  showrecipesList(randomrecipes);
+
+}
+
+showrecipesList(recipesList[0]);
+
+function showrecipesList(recipesList) {
+  document.getElementById("productImage").src = recipesList.image;
+  document.getElementById("rate").innerHTML = recipesList.rating;
+  document.getElementById("reviews").innerHTML = recipesList.reviews;
+  document.getElementById("prepTime").innerHTML = recipesList.prepTime;
+  document.getElementById("serving").innerHTML = recipesList.servings;
+  document.getElementById("cookTime").innerHTML = recipesList.cookTime;
+  document.getElementById("tag1").innerHTML = recipesList.tags[0];
+  document.getElementById("tag2").innerHTML = recipesList.tags[1];
+  document.getElementById("title").innerHTML = recipesList.title;
+  document.getElementById("tileInfo").innerHTML = recipesList.tileInfo;
+
+  var ingredientsHtml = ``;
+
+  for (var i = 0; i < recipesList.ingredients.length; i++) {
+    ingredientsHtml += `<li>${recipesList.ingredients[i]}</li>`
+  }
+  document.getElementById("ingredients").innerHTML = recipesList.ingredients;
+
+
+  var instructionsHtml = "";
+  for (var i = 0; i < recipesList.instructions.length; i++) {
+    instructionsHtml += `<li>${recipesList.instructions[i]}</li>`
+
+  }
+  document.getElementById("instructions").innerHTML = recipesList.instructions;
+
+  // object
+  var nutritionHtml = '<div class="row g-3">';
+
+  for (var i = 0; i < recipesList.nutrition.length; i++) {
+    nutritionHtml += `
+    <div class="col-6 col-md-6 p-2 d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-2">
+        <i class="${recipesList.nutrition[i].icon}"></i>
+        <span>${recipesList.nutrition[i].label}</span>
+      </div>
+      <div class="fw-bold">${recipesList.nutrition[i].value}</div>
+    </div>
+  `;
   }
 
-  // Update image
-  document.querySelector(".fixed-img").src = imagePath;
+  nutritionHtml += '</div>'; // close row
 
-  // Update rating
-  document.querySelector(".rating-box span.fw-bold").textContent = randomRecipe.rating;
-  document.querySelector(".rating-box span.text-muted").textContent = randomRecipe.reviews;
+  document.getElementById("nutrition").innerHTML = nutritionHtml;
 
-  // Update prep info
-  const prepDivs = document.querySelectorAll(".prep-info div");
-  prepDivs[0].querySelector(".fw-bold").textContent = randomRecipe.prepTime;
-  prepDivs[1].querySelector(".fw-bold").textContent = randomRecipe.cookTime;
-  prepDivs[2].querySelector(".fw-bold").textContent = randomRecipe.servings;
 
-  // Update tags
-  const badges = document.querySelectorAll(".badge1, .badge2");
-  badges[0].textContent = randomRecipe.tags[0];
-  badges[1].textContent = randomRecipe.tags[1];
+  var tipsHtml = "";
+  for (var i = 0; i < recipesList.tips.length; i++) {
+    tipsHtml += `<li>${recipesList.tips[i]}</li>`
+  }
 
-  // Update title
-  document.querySelector("h1").textContent = randomRecipe.title;
+  document.getElementById("tips").innerHTML = recipesList.tips;
 
-  // Update alert
-  document.querySelector(".alert-danger").textContent = randomRecipe.alert;
 
-  //  Update Ingredients tab
-  const ingredientsList = document.querySelector("#ingredients ul");
-  ingredientsList.innerHTML = "";
-  randomRecipe.ingredients.forEach(item => {
-    const li = document.createElement("li");
-    li.className = "list-group-item";
-    li.textContent = item;
-    ingredientsList.appendChild(li);
-  });
+  if (recipesList.alert == true) {
+    document.getElementById('alertInfo').classList.remove('d-none')
+  }
+  else {
+    document.getElementById('alertInfo').classList.add('d-none')
 
-  //  Update Instructions tab
-  const instructionsList = document.querySelector("#instructions ol");
-  instructionsList.innerHTML = "";
-  randomRecipe.instructions.forEach(step => {
-    const li = document.createElement("li");
-    li.className = "list-group-item";
-    li.textContent = step;
-    instructionsList.appendChild(li);
-  });
+  }
 
-  // Update Nutrition tab
-  const nutritionRow = document.querySelector("#nutrition .row");
-  nutritionRow.innerHTML = "";
-  randomRecipe.nutrition.forEach(n => {
-    const div = document.createElement("div");
-    div.className = "col-6 col-md-4 p-2";
-    div.innerHTML = `<i class="fa-solid ${n.icon}"></i><br><strong>${n.value}</strong><br>${n.label}`;
-    nutritionRow.appendChild(div);
-  });
+}
 
-  // Update Tips tab
-  const tipsList = document.querySelector("#tips ul");
-  tipsList.innerHTML = "";
-  randomRecipe.tips.forEach(tip => {
-    const li = document.createElement("li");
-    li.className = "list-group-item";
-    li.innerHTML = `<i class="fa-solid fa-check text-warning me-2"></i>${tip}`;
-    tipsList.appendChild(li);
-  });
-});
+

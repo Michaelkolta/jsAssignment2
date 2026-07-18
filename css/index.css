@@ -237,3 +237,15 @@ color: var(--main-color);
   }
 }
 
+
+/* nav and tabs */
+
+.icon-color {
+  padding: 10px;
+  background-color: #FFEDD4;
+  border-radius: 5px;
+}
+.icon.fa-solid {
+  color: #F54900;
+
+}
